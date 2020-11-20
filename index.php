@@ -85,8 +85,8 @@ if ($remarks == 'failed') {
 ?>
 <table border="0" align="center" cellpadding="2" cellspacing="0">
 <tr id="lg-1">
-<td class="tl-1"><div align="left" id="tb-name">Username :</div></td>
-<td><input type="text" id="tb-box" name="pseudo" /></td>
+<td class="tl-1"><div align="left" id="tb-name">Email :</div></td>
+<td><input type="text" id="tb-box" name="email" /></td>
 </tr>
 <tr id="lg-1">
 <td class="tl-1"><div align="left" id="tb-name">Mot de passe :</div></td>

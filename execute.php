@@ -9,10 +9,10 @@ if ($num_rows) {
 }else {
  $prenom=$_POST['prenom'];
  $nom=$_POST['nom'];
- $mail=$_POST['email'];
+ $email=$_POST['email'];
  $pseudo=$_POST['pseudo'];
  $mdp=$_POST['mdp'];
- if(mysqli_query($con,"INSERT INTO animateurs(prenom_anim, nom_anim, mail_anim,pseudo_anim, mdp_anim)VALUES('$prenom', '$nom','$mail', '$pseudo', '$mdp')")){ 
+ if(mysqli_query($con,"INSERT INTO animateurs(prenom_anim, nom_anim, mail_anim,pseudo_anim, mdp_anim)VALUES('$prenom', '$nom','$email', '$pseudo', '$mdp')")){ 
 	header("location: index.php?remarks=success");
  }else{
 	 $e=mysqli_error($con);
