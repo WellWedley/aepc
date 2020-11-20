@@ -1,5 +1,5 @@
 <?php
- include('session.php');
+include 'session.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -23,12 +23,12 @@
 You are now logged in. you can logout by clicking on signout link given below.
 <div id="contentbox">
 <?php
-$sql="SELECT * FROM member where mem_id=$loggedin_id";
-$result=mysqli_query($con,$sql);
+$sql = "SELECT * FROM member where mem_id=$loggedin_id";
+$result = mysqli_query($con, $sql);
 ?>
 <?php
-while($rows=mysqli_fetch_array($result)){
-?>
+while ($rows = mysqli_fetch_array($result)) {
+    ?>
 <div id="signup">
 <div id="signup-st">
 <form action="" method="POST" id="signin" id="reg">
@@ -61,8 +61,8 @@ while($rows=mysqli_fetch_array($result)){
 <div id="st"><a href="deleteac.php" id="st-btn">Delete Account</a></div>
 </div>
 </div>
-<?php 
-// close while loop 
+<?php
+// close while loop
 }
 ?>
 </div>
