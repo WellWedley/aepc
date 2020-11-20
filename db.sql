@@ -13,7 +13,7 @@ INSERT INTO animateurs VALUES
 ("julien.monroy@gmail.com","Monju","mdp","Monroy", "Julien","Titulaire",0614525478, '20001206'),
 ("jean.restam@hotmail.fr","restJean","mdp1","Restam", "Jean","Stagiaire",0617455487, '19981005'),
 ("maxine.flubert@live.org","fluxmax","mdp2","Flubert", "Maxine","Titulaire",0715485747, '19970502') ; 
-------------------------------------------------------------
+
 
 CREATE TABLE tuteurs( 
                        mail_tut varchar(255) , 
@@ -25,7 +25,7 @@ CREATE TABLE tuteurs(
                        adr_tut  varchar(200), 
                        PRIMARY KEY (mail_tut)
                        ); 
-------------------------------------------------------------
+
 
 
 
@@ -38,7 +38,7 @@ CREATE TABLE enfants(
     				   PRIMARY KEY (nom_enf,prenom_enf)); 
 
 
-------------------------------------------------------------
+
 
 
  CREATE TABLE directeurs( mail_dir varchar (255), 
@@ -54,7 +54,7 @@ CREATE TABLE enfants(
                        ); 
 
 
-------------------------------------------------------------
+
 
 CREATE TABLE sejours( id_sejour int(5) NOT NULL AUTO_INCREMENT,
                       nom_sejour varchar(50),
@@ -70,4 +70,3 @@ CREATE TABLE sejours( id_sejour int(5) NOT NULL AUTO_INCREMENT,
                       FOREIGN KEY (fk_nom_enf) REFERENCES enfants(nom_enf),
                    	  PRIMARY KEY (id_sejour)) ; 
 
-------------------------------------------------------------
