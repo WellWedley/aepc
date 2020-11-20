@@ -1,18 +1,18 @@
 <?php 
 session_start();
 include('db.php');
-$username=$_POST['username'];
-$result = mysqli_query($con,"SELECT * FROM member WHERE username='$username'");
+$email=$_POST['email'];
+$result = mysqli_query($con,"SELECT * FROM animateurs WHERE mail_anim='$email'");
 $num_rows = mysqli_num_rows($result);
 if ($num_rows) {
  header("location: index.php?remarks=failed"); 
 }else {
- $fname=$_POST['fname'];
- $lname=$_POST['lname'];
- $address=$_POST['address'];
- $username=$_POST['username'];
- $password=$_POST['password'];
- if(mysqli_query($con,"INSERT INTO member(fname, lname, address,username, password)VALUES('$fname', '$lname','$address', '$username', '$password')")){ 
+ $prenom=$_POST['prenom'];
+ $nom=$_POST['nom'];
+ $mail=$_POST['email'];
+ $pseudo=$_POST['pseudo'];
+ $mdp=$_POST['mdp'];
+ if(mysqli_query($con,"INSERT INTO animateurs(prenom_anim, nom_anim, mail_anim,pseudo_anim, mdp_anim)VALUES('$prenom', '$nom','$mail', '$pseudo', '$mdp')")){ 
 	header("location: index.php?remarks=success");
  }else{
 	 $e=mysqli_error($con);

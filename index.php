@@ -46,24 +46,24 @@ if ($remarks == 'error') {
 <div align="left" id="tb-name">Prénom :</div>
 </td>
 <td width="171">
-<input type="text" name="fname" id="tb-box"/>
+<input type="text" name="prenom" id="tb-box"/>
 </td>
 </tr>
 <tr>
 <td class="t-1"><div align="left" id="tb-name">Nom : </div></td>
-<td><input type="text" name="lname" id="tb-box"/></td>
+<td><input type="text" name="nom" id="tb-box"/></td>
 </tr>
 <tr>
 <td class="t-1"><div align="left" id="tb-name">Email : </div></td>
-<td><input type="text" id="tb-box" name="address" /></td>
+<td><input type="text" id="tb-box" name="email" /></td>
 </tr>
 <tr>
 <td class="t-1"><div align="left" id="tb-name">Pseudo : </div></td>
-<td><input type="text" id="tb-box" name="username" /></td>
+<td><input type="text" id="tb-box" name="pseudo" /></td>
 </tr>
 <tr>
 <td class="t-1"><div align="left" id="tb-name">Mot de passe : </div></td>
-<td><input id="tb-box" type="password" name="password" /></td>
+<td><input id="tb-box" type="password" name="mdp" /></td>
 </tr>
 </table>
 <div id="st"><input name="submit" type="submit" value="Envoyer" id="st-btn"/></div>
@@ -86,11 +86,11 @@ if ($remarks == 'failed') {
 <table border="0" align="center" cellpadding="2" cellspacing="0">
 <tr id="lg-1">
 <td class="tl-1"><div align="left" id="tb-name">Username :</div></td>
-<td><input type="text" id="tb-box" name="username" /></td>
+<td><input type="text" id="tb-box" name="pseudo" /></td>
 </tr>
 <tr id="lg-1">
 <td class="tl-1"><div align="left" id="tb-name">Mot de passe :</div></td>
-<td><input id="tb-box" type="password" name="password" /></td>
+<td><input id="tb-box" type="password" name="mdp" /></td>
 </tr>
 </table>
 <div id="st"><input name="submit" type="submit" value="Connexion" id="st-btn"/></div>
