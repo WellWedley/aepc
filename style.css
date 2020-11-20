@@ -101,6 +101,7 @@ nav li{
 #tb-name{
 	float:right;
 	font-size:20px;
+	margin-right: 10px;
 }
 #tb-box{
 	height:22px;
@@ -129,7 +130,7 @@ nav li{
 }
 td.t-1{
 	float:left;
-	width:44%;
+	width:100%;
 	text-align:right;
 	color:#C5EFF7;
 }
@@ -175,4 +176,7 @@ td.t-2{
 	font-size:18px;
 	font-weight:bold;
 	color:#3498DB;
+}
+.titleh1{
+	text-align: center;
 }
