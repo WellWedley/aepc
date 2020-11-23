@@ -19,4 +19,3 @@ if ($num_rows) {
 	header("location: index.php?remarks=error&value=$e");	 
  }
 }
-?>
