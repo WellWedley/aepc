@@ -6,7 +6,7 @@ include 'session.php';
 <head>
 	<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
 	<link rel="stylesheet" type="text/css" href="style.css" />
-	<title>AEPC</title>
+	<title>7topics - Login Demo</title>
 </head>
 <body>
 <header>
@@ -19,16 +19,18 @@ include 'session.php';
 </header>
 <div id="center">
 <div id="center-set">
-<h1 align='center'>Bienvenue  <?php echo $loggedin_session; ?>,</h1>
-Vous êtes maintenant en ligne.
+<h1 align='center'>Bienvenue <?php echo $loggedin_session; ?>,</h1>
+Vous êtes connecté.	
 <div id="contentbox">
 <?php
 $sql = "SELECT * FROM animateurs where mail_anim=$loggedin_id";
 $result = mysqli_query($con, $sql);
+
 ?>
 <?php
 while ($rows = mysqli_fetch_array($result)) {
-    ?>
+	?>
+	
 <div id="signup">
 <div id="signup-st">
 <form action="" method="POST" id="signin" id="reg">
@@ -44,7 +46,7 @@ while ($rows = mysqli_fetch_array($result)) {
 </tr>
 <tr id="lg-1">
 <td class="tl-1"><div align="left" id="tb-name">Name:</div></td>
-<td class="tl-4"><?php echo $rows['prenom']; ?> <?php echo $rows['nom']; ?></td>
+<td class="tl-4"><?php echo $rows['prenom_anim']; ?> <?php echo $rows['nom']; ?></td>
 </tr>
 <tr id="lg-1">
 <td class="tl-1"><div align="left" id="tb-name">Email :</div></td>
