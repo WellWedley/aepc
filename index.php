@@ -1,131 +1,79 @@
 <?php include "logincheck.php"; ?>
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
-	<meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
-	<link rel="stylesheet" type="text/css" href="style.css" />
-	<link rel="icon " href="img/favico/logo_amitie_cevenole1.ico">
-	<!-- Bootstrap 
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
--->
-	<title>Aepc Amitié Cévenole</title>
+  <?php include_once 'head.php'; ?>
 </head>
 
-<body>
-	<header>
-		<nav>
-			<ul>
-				<li><a href="index.php">Accueil</a></li>
-				<li><a href="">Lien 2</a></li>
 
+<body class="bg-dark">
+  <div class="container-fluid ">
+    <?php include 'header.php'; ?>
+    <div class="card" style="width: 80%; margin:2% 10%">
+      <a href="sejours.php"><img class="card-img-top" src="img/logo/skieur2.png" alt="Card image cap"></a>
+      <div class="card-body">
+        <p class="card-text">Un grand merci, pour les séjours de cet été, à Mons la Trivalle, à Camprieu et à Valras. Nous repartons de plus belle pour vous proposer de beaux séjours en 2021.
 
-		</nav>
-	</header>
-	<h1 class='titleh1'> Association d'Education Populaire Cévenole</h1>
+          Rentrons dans le vif du sujet à présent. Comme vous avez pu le ressentir ces derniers jours, le froid pointe le bout de son nez, and Winter is coming.
 
-	<div id="center">
-		<div id="center-set">
-			<div id="signup">
-				<div id="signup-st">
-					<div style="align:center">
+          Il est donc tout naturel de commencer à penser à, à… la raclette ?!
 
-						<?php
-						$remarks = isset($_GET['remarks']) ? $_GET['remarks'] : '';
-						if ($remarks == null and $remarks == "") {
-							echo ' <div id="reg-head" class="headrg">Première connexion</div> ';
-						}
-						if ($remarks == 'success') {
-							echo ' <div id="reg-head" class="headrg">Enregistrement effectué.</div> ';
-						}
-						if ($remarks == 'failed') {
-							echo ' <div id="reg-head-fail" class="headrg">Cet utilisateur existe déjà, échec de l\'enregistrement</div> ';
-						}
-						if ($remarks == 'error') {
-							echo ' <div id="reg-head-fail" class="headrg">Echec de l\'enregistrement <br> Error: ' . $_GET['value'] . ' </div> ';
-						}
-						?>
+          Et non ! Nous parlons bien évidemment de nos séjours de ski ESCAPADE D'HIVER 2021 (mais oui aussi de la raclette).</p>
+      </div>
+    </div>
 
-					</div>
-					<form name="reg" action="execute.php" onsubmit="return validateForm()" method="POST" id="reg">
-						<table border="0" align="center" cellpadding="2" cellspacing="0">
-							<tr>
-								<td class="t-1">
-									<div align="left" id="tb-name">Prénom :</div>
-								</td>
-								<td width="171">
-									<input type="text" name="prenom" id="tb-box" />
-								</td>
-							</tr>
-							<tr>
-								<td class="t-1">
-									<div align="left" id="tb-name">Nom : </div>
-								</td>
-								<td><input type="text" name="nom" id="tb-box" /></td>
-							</tr>
-							<tr>
-								<td class="t-1">
-									<div align="left" id="tb-name">Email : </div>
-								</td>
-								<td><input type="text" id="tb-box" name="email" /></td>
-							</tr>
-							<tr>
-								<td class="t-1">
-									<div align="left" id="tb-name">Pseudo : </div>
-								</td>
-								<td><input type="text" id="tb-box" name="pseudo" /></td>
-							</tr>
-							<tr>
-								<td class="t-1">
-									<div align="left" id="tb-name">Mot de passe : </div>
-								</td>
-								<td><input id="tb-box" type="password" name="mdp" /></td>
-							</tr>
-						</table>
-						<div id="st"><input name="submit" type="submit" value="Envoyer" id="st-btn" /></div>
-					</form>
+    <!-- Container-fluid-->
 
-				</div>
-			</div>
-			<div id="login">
-				<div id="login-st">
-					<form action="" method="POST" id="signin" id="reg">
-						<?php
-						$remarks = isset($_GET['remark_login']) ? $_GET['remark_login'] : '';
-						if ($remarks == null and $remarks == "") {
-							echo ' <div id="reg-head" class="headrg">Se connecter</div> ';
-						}
-						if ($remarks == 'failed') {
-							echo ' <div id="reg-head-fail" class="headrg">Identifiants erronés, veuillez réessayer.</div> ';
-						}
-						?>
-						<table border="0" align="center" cellpadding="2" cellspacing="0">
-							<tr id="lg-1">
-								<td class="tl-1">
-									<div align="left" id="tb-name">Email :</div>
-								</td>
-								<td><input type="text" id="tb-box" name="email" /></td>
-							</tr>
-							<tr id="lg-1">
-								<td class="tl-1">
-									<div align="left" id="tb-name">Mot de passe :</div>
-								</td>
-								<td><input id="tb-box" type="password" name="mdp" /></td>
-							</tr>
-						</table>
-						<div id="st"><input name="submit" type="submit" value="Connexion" id="st-btn" /></div>
-					</form>
+    <div class="row caroussel-container">
+      <div class="col-8">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="img/sejours/2020/winter/flyers_sejours_ski/enfants_ski.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="img/sejours/2020/winter/flyers_sejours_ski/enfants_repas_gite_colo.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="img/sejours/2020/winter/flyers_sejours_ski/enfant_snowboard.jpg" alt="Third slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="img/sejours/2020/winter/flyers_sejours_ski/jump_snowboard.jpg" alt="Third slide">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Photo précédédente</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Photo suivante</span>
+          </a>
+        </div>
+      </div>
+    </div>
 
-				</div>
-			</div>
-		</div>
-	</div>
-	<div id="footer">
-		<p> Amitié Cévenole</p>
-	</div>
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-	<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
--->
+  </div>
+  <script src="snow.js"></script>
+  <!-- Script Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+  </script>
+
+  <footer class="page-footer ">
+    <?php include 'footer.php' ?>
+    <div class="footer-copyright text-center text-white">© 2020 Copyright :
+      <a href="index.php"> Amitié Cévenole</a>
+    </div>
+  </footer>
 </body>
 
 </html>

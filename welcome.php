@@ -1,28 +1,15 @@
 <?php
 include 'session.php';
-?>
+?>	
 <!DOCTYPE html>
 <html>
+<?php include 'head.php'?>
 
-<head>
-	<meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
-	<link rel="stylesheet" type="text/css" href="style.css" />
-	<link rel="icon " href="img/favico/logo_amitie_cevenole1.ico">
-	<title>AEPC</title>
-</head>
-
-<body>
-	<header>
-		<nav>
-			<ul>
-				<li><a href="index.php">Accueil</a></li>
-				<li><a href="">Lien 2</a></li>
-			</ul>
-		</nav>
-	</header>
+<body class="bg-dark">
+	<?php include 'header.php'?>
 	<div id="center">
 		<div id="center-set">
-			<h1 align='center'>Bienvenue <?php echo $loggedin_name ?>,</h1>
+			<h1 style="color:white" align='center'>Bienvenue <?php echo $loggedin_name ?>,</h1>
 			<form action=""><input type="text" value="<?php echo $loggedin_session ?>" disabled></form>
 			<div id="contentbox">
 				<?php
@@ -34,8 +21,6 @@ include 'session.php';
 				while ($rows = mysqli_fetch_array($result)) {
 
 				?>
-
-
 					<div id="signup">
 						<div id="signup-st">
 							<form action="" method="POST" id="signin" id="reg">
