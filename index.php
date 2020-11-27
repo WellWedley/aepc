@@ -1,5 +1,3 @@
-
-
 <?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -10,25 +8,27 @@
 
 
 <body class="bg-dark">
-  <div class="container-fluid ">
-    <?php include 'header.php';?>
-    <div class="card" style="width: 80%; margin:2% 10%">
-      <a href="sejours.php"><img class="card-img-top" src="img/logo/skieur2.png" alt="Card image cap"></a>
-      <div class="card-body">
-        <p class="card-text">Un grand merci, pour les séjours de cet été, à Mons la Trivalle, à Camprieu et à Valras. Nous repartons de plus belle pour vous proposer de beaux séjours en 2021.
+  <?php include 'header.php'; ?>
+  <div class="container-fluid">
+    <div class="row d-flex justify-content-center">
+      <div class="card col-md-6">
+        <a href="sejours.php"><img class="card-img-top" src="img/logo/skieur2.png" alt="Card image cap"></a>
+        <div class="card-body">
+          <p class="card-text">Un grand merci, pour les séjours de cet été, à Mons la Trivalle, à Camprieu et à Valras. Nous repartons de plus belle pour vous proposer de beaux séjours en 2021.
 
-          Rentrons dans le vif du sujet à présent. Comme vous avez pu le ressentir ces derniers jours, le froid pointe le bout de son nez, and Winter is coming.
+            Rentrons dans le vif du sujet à présent. Comme vous avez pu le ressentir ces derniers jours, le froid pointe le bout de son nez, and Winter is coming.
 
-          Il est donc tout naturel de commencer à penser à, à… la raclette ?!
+            Il est donc tout naturel de commencer à penser à, à… la raclette ?!
 
-          Et non ! Nous parlons bien évidemment de nos séjours de ski ESCAPADE D'HIVER 2021 (mais oui aussi de la raclette).</p>
+            Et non ! Nous parlons bien évidemment de nos séjours de ski ESCAPADE D'HIVER 2021 (mais oui aussi de la raclette).</p>
+        </div>
       </div>
     </div>
 
     <!-- Container-fluid-->
 
-    <div class="row caroussel-container">
-      <div class="col-8">
+    <div class="row d-flex justify-content-center ">
+      <div class="col-6 ">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -38,7 +38,7 @@
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img class="d-block w-100" src="img/sejours/2020/winter/flyers_sejours_ski/enfants_ski.jpg" alt="First slide">
-              
+
             </div>
             <div class="carousel-item">
               <img class="d-block w-100" src="img/sejours/2020/winter/flyers_sejours_ski/enfants_repas_gite_colo.jpg" alt="Second slide">
@@ -64,7 +64,7 @@
 
   </div>
   <script src="snow.js"></script>
-    <?php include 'footer.php' ?>
+  <?php include 'footer.php' ?>
 
 </body>
 

@@ -1,7 +1,4 @@
-.caroussel-container {
-	width: 80%;
-	margin: 0 20%
-}
+
 
 li a {
 	color: #07509d;
@@ -47,4 +44,8 @@ li a {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+.card-foot{
+  height:300px ; 
 }
