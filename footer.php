@@ -54,5 +54,5 @@
     </div>
   </div>
   <p class="text-white text-center"> © 2020 Copyright : Amitié Cévenole </p>
-
+  <a href="./index.php?id='directeur'"> Directeur</a>
 </footer>

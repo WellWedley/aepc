@@ -31,7 +31,7 @@ include 'session.php';
 
 			?>
 				<div class="column">
-					</div>
+				</div>
 
 
 
@@ -50,18 +50,21 @@ include 'session.php';
 								</div>
 							</div>
 						</div>
-						</div>
-					<?php
-					// close while loop
-				}
-					?>
 					</div>
-				</div>
+					
 
-				</br>
-				<div id="footer">
-					<?php include 'footer.php' ?>
+				<?php
+
+				// close while loop
+			}
+				?>
 				</div>
+		</div>
+
+		</br>
+		<div id="footer">
+			<?php include 'footer.php' ?>
+		</div>
 
 </body>
 
