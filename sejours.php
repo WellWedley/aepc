@@ -40,7 +40,7 @@
             </div>
         </div>
     </div>
-    <?php include "./bootstrap_scripts.php";
+    <?php 
     include "./footer.php"
     ?>
 

@@ -9,7 +9,7 @@
 
 
 
-    <?php include "./bootstrap_scripts.php";
+    <?php 
     include "./footer.php";
     ?>
 </body>

@@ -4,7 +4,7 @@
         <img width="70" height="70" src="./img/logo/logo_amitie_cevenole1.png" alt="Logo de l'association Amitie Cevenole">
         Amitié Cévenole
     </a>
-    
+
     <ul class="nav justify-content-center">
         <li class="nav-item">
             <a class="nav-link active" href="./index.php">Accueil</a>
@@ -19,13 +19,13 @@
             <a class="nav-link" href="./apropos.php">A propos</a>
         </li>
         <?php
- 
+
         $curPageName = substr($_SERVER["SCRIPT_NAME"], strrpos($_SERVER["SCRIPT_NAME"], "/") + 1);
         if (isset($_SESSION['email']) || isset($_SESSION['pseudo'])) {
             echo ' 
             <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                        <img width="30"src="./img/logo/logout.png">
+                        <img width="15"src="./img/logo/membre.png">
                         </a>
 
                 <div class="dropdown-menu dropdown-menu-right">';
@@ -34,8 +34,8 @@
 
                 echo ' <!-- Paramètres du compte -->
                     <button type="button" class="btn btn-primary dropdown-item" onclick="window.location.href=\'./welcome.php\';">
-  Mon espace    
-    </button>';
+                Mon espace    
+                </button>';
             }
             echo ' <!-- Bouton appelant le modal "#logout"-->
                     <button  type="button" class="btn btn-primary dropdown-item" data-toggle="modal" data-target="#logout">
