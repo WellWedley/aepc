@@ -22,3 +22,29 @@ li a {
 	width: 40%;
 	margin: 0 165px 20px;
 }
+
+.overlay {
+
+  background-color: #07509d;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  transform: scale(0);
+  transition: .7s ease;
+}
+
+/* When you mouse over the container, the overlay text will "zoom" in display */
+.container_winter:hover .overlay {
+  transform: scale(1);
+}
+
+/* Some text inside the overlay, which is positioned in the middle vertically and horizontally */
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}

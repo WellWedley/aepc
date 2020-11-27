@@ -1,4 +1,6 @@
-<?php include "logincheck.php"; ?>
+
+
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -9,7 +11,7 @@
 
 <body class="bg-dark">
   <div class="container-fluid ">
-    <?php include 'header.php'; ?>
+    <?php include 'header.php';?>
     <div class="card" style="width: 80%; margin:2% 10%">
       <a href="sejours.php"><img class="card-img-top" src="img/logo/skieur2.png" alt="Card image cap"></a>
       <div class="card-body">
@@ -36,6 +38,7 @@
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img class="d-block w-100" src="img/sejours/2020/winter/flyers_sejours_ski/enfants_ski.jpg" alt="First slide">
+              
             </div>
             <div class="carousel-item">
               <img class="d-block w-100" src="img/sejours/2020/winter/flyers_sejours_ski/enfants_repas_gite_colo.jpg" alt="Second slide">
@@ -61,19 +64,8 @@
 
   </div>
   <script src="snow.js"></script>
-  <!-- Script Bootstrap -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
-  </script>
-
-  <footer class="page-footer ">
     <?php include 'footer.php' ?>
-    <div class="footer-copyright text-center text-white">© 2020 Copyright :
-      <a href="index.php"> Amitié Cévenole</a>
-    </div>
-  </footer>
+
 </body>
 
 </html>
