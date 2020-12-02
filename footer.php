@@ -28,8 +28,7 @@
           <div class="card-body text-center">
             <h5 class="card-title ">Contact</h5>
             <p class="card-text">C'est ici que ça se passe ! </p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11553.603335991736!2d3.8811282!3d43.6190156!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x92ff8424f62abf17!2sAmiti%C3%A9%20C%C3%A9venole%20(AEPC)!5e0!3m2!1sfr!2sfr!4v1606397902024!5m2!1sfr!2sfr" width="200" height="" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
-            </iframe>
+            
             <p><em>2 Rue Ernest Castan, 34090 Montpellier</em></p>
             </a>
           </div>

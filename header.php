@@ -2,7 +2,7 @@
 <nav class="navbar sticky-top navbar-light bg-light mb-5 ">
     <a class="navbar-brand" href="./index.php">
         <img width="70" height="70" src="./img/logo/logo_amitie_cevenole1.png" alt="Logo de l'association Amitie Cevenole">
-        Amitié Cévenole
+      Amitié Cévenole
     </a>
 
     <ul class="nav justify-content-center">
@@ -33,9 +33,10 @@
             if ($curPageName !== 'welcome.php') {
 
                 echo ' <!-- Paramètres du compte -->
-                    <button type="button" class="btn btn-primary dropdown-item" onclick="window.location.href=\'./welcome.php\';">
-                Mon espace    
-                </button>';
+                    <button type="button" class="btn btn-primary dropdown-item" 
+                    onclick="window.location.href=\'./welcome.php\';">
+                                Mon espace    
+                    </button>';
             }
             echo ' <!-- Bouton appelant le modal "#logout"-->
                     <button  type="button" class="btn btn-primary dropdown-item" data-toggle="modal" data-target="#logout">
@@ -67,7 +68,15 @@
 </nav> <?php
         $remarks = isset($_GET['remark_login']) ? $_GET['remark_login'] : '';
         if ($remarks == 'failed') {
-            echo ' <div class="text-white" id="reg-fail" class="headrg ">Identifiants erronés, veuillez réessayer.</div> ';
+            echo '<div class="container-fluid">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-md-12>
+                            <h1 class="text-white-fail ">
+                                Identifiants erronés, veuillez réessayer.
+                            </h1>
+                         </div>
+                    </div>
+                </div>';
         } ?>
 <!-- Modal de connexion -->
 <div class="modal  fade" id="login" tab.index="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="ue">
@@ -80,15 +89,15 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form class="login-form" action="./logincheck.php" method="POST" id="signin" id="reg">
+                <form class="login-form" action="./logincheck.php" method="POST" id="signin">
                     <?php
                     $remarks = isset($_GET['remark_login']) ? $_GET['remark_login'] : '';
                     if ($remarks == null and $remarks == "") {
-                        echo ' <h6 class="bg-dark text-white text-center" id="reg-head" class="headrg"
+                        echo ' <h6 class="bg-dark text-white text-center-head" class="headrg"
                             >Veuillez renseigner vos identifiants</h6> ';
                     }
                     if ($remarks == 'failed') {
-                        echo ' <div class="" id="reg-fail" class="headrg ">Identifiants erronés, veuillez réessayer.</div> ';
+                        echo ' <div class="-fail" class="headrg ">Identifiants erronés, veuillez réessayer.</div> ';
                     }
                     ?>
 
@@ -100,8 +109,8 @@
 
                         <div class="col-lg-6 col-md-6 col-sm-4 col-xs-6">
                             <p>
-                                <input class="form-control form-control-sm text-center" type="text" id="tb-box" name="email" required /></p>
-                            <p> <input class="form-control form-control-sm text-center" id="tb-box" type="password" name="mdp" required /></p>
+                                <input class="form-control form-control-sm text-center" type="text"  name="email" required /></p>
+                            <p> <input class="form-control form-control-sm text-center"  type="password" name="mdp" required /></p>
                         </div>
                         <button class="btn  
                     btn-primary btn-dark login-btn" name="submit" type="submit" value="Connexion" id="st-btn" autofocus>Connexion</button>
@@ -134,7 +143,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="./execute.php" onsubmit="return validateForm()" name="reg" method="POST" id="reg">
+                <form action="./execute.php" onsubmit="return validateForm()" name="reg" method="POST" >
 
                     <div class="row form-group">
                         <div class="col-md-4">
@@ -148,9 +157,9 @@
 
                             <p> <input type="text" name="prenom" id="prenom-form" required /> </p>
                             <p><input type="text" name="nom" id="nom-form" required /></p>
-                            <p><input type="text" id="tb-box" name="email" required /></p>
-                            <p> <input type="text" id="tb-box" name="pseudo" required /></p>
-                            <p> <input id="tb-box" type="password" name="mdp" required /></p>
+                            <p><input type="text"  name="email" required /></p>
+                            <p> <input type="text"  name="pseudo" required /></p>
+                            <p> <input  type="password" name="mdp" required /></p>
                         </div>
                     </div>
                     <button class="btn btn-primary register-button" name="submit" type="submit" value="envoyer">S'enregistrer</button>
@@ -178,7 +187,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="./logout.php" onsubmit="return validateForm()" name="reg" method="POST" id="reg">
+                <form action="./logout.php" onsubmit="return validateForm()" name="reg" method="POST">
                     <button class="btn btn-primary register-button" name="submit" type="submit" value="envoyer">Oui</button>
                 </form>
             </div>

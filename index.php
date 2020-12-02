@@ -10,7 +10,7 @@
 <body class="bg-dark">
   <?php include 'header.php'; ?>
   <div class="container-fluid">
-    <div class="row d-flex justify-content-center">
+    <div class="row d-flex justify-content-center mb-5">
       <div class="card col-md-6">
         <a href="sejours.php"><img class="card-img-top" src="img/logo/skieur2.png" alt="Card image cap"></a>
         <div class="card-body">
@@ -27,7 +27,7 @@
 
     <!-- Container-fluid-->
 
-    <div class="row d-flex justify-content-center ">
+    <div class="row d-flex justify-content-center mt-5">
       <div class="col-6 ">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
