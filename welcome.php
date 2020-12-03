@@ -35,26 +35,26 @@ include 'session.php';
 					<div class="tab-pane fade show active" id="p1">
 						<!-- Formulaire pour Enregistrer un enfant -->
 						<form action="exec_enfant.php" method="POST">
-							<div class="form-group row">
+							<div class="form-group row align-items-start">
 								<label for="" class="col-4">
-									<p class="text-white text-right">Nom : </p>
+									<p class="text-white text-right ">Nom : </p>
 								</label>
 								<input name="nom" type="text" class="col-4 dflex align-items-center">
 							</div>
-							<div class="form-group row">
+							<div class="form-group row align-items-start">
 								<label for="" class="col-4">
 									<p class="text-white text-right">Prénom : </p>
 								</label>
 								<input type="text" class="col-4" name="prenom">
 							</div>
-							<div class="form-group row">
+							<div class="form-group row align-items-start">
 								<label for="" class="col-4">
 									<p class="text-white text-right">Date de Naissance : </p>
 								</label>
 								<input type="date" class="col-4" name="date">
 							</div>
-							<div class="container mt-5">
-								<div class="row justify-content-center">
+							<div class="container mt-5 ">
+								<div class="row justify-content-center ">
 									<button class="btn btn-primary col-4 " name="ajout_enf" type="submit">
 										<p class="">Enregistrer mon enfant</p>
 									</button>
@@ -94,7 +94,7 @@ include 'session.php';
 											echo '</select>' . '
 											<div class="container mt-5">
 												<div class="row justify-content-center">
-													<a href="#new" class="btn btn-primary col-4" data-toggle="collapse" name="suivant" type="">
+													<a href="#new" class="btn btn-sm btn-primary col-4" data-toggle="collapse" name="suivant" type="">
 														<p class="">Suivant </p>
 													</a>
 												</div>
@@ -113,7 +113,7 @@ include 'session.php';
 											} else {
 
 												echo '<h3 class="  mb-5 mt-5">
-												Quel est le  séjour concerné ? </h3> '.'
+												Quel est le  séjour concerné ? </h3> ' . '
 												<div class="btn-group btn-group-toggle" data-toggle="buttons">';
 
 												while ($rows = mysqli_fetch_array($result)) {
@@ -125,9 +125,9 @@ include 'session.php';
 																</h6> 	
 														
 																<label class="btn btn-secondary ">
-																	<input type="radio" id="'.$rows['id_sejour'].' 
-																		"name="choix_sejour" value="'.$rows['id_sejour'].'"  
-																		autocomplete="off" checked> '.$rows['nom_sejour'].' 
+																	<input type="radio" id="' . $rows['id_sejour'] . ' 
+																		"name="choix_sejour" value="' . $rows['id_sejour'] . '"  
+																		autocomplete="off" checked> ' . $rows['nom_sejour'] . ' 
 																</label>
 															</div>
 														</div>	
@@ -155,11 +155,14 @@ include 'session.php';
 					</div>
 
 					<div class="tab-pane fade text-center" id="p3">
-					<?php
-										$sql = "SELECT * FROM participe_sejour where fk_id_enf=(SELECT id_enf from enfants LIMIT 1)";
-										$result = mysqli_query($con, $sql);
-										if (mysqli_num_rows($result) == 0) {
-											echo '<h3 class="text-white  
+						<?php
+
+						$sql = "SELECT nom_enf,prenom_enf,date_naiss_enf,nom_sejour,date_debut,date_fin,lieu_sejour FROM `participe_sejour`,enfants,sejours 
+										WHERE fk_id_enf=id_enf and fk_id_sejour=id_sejour 
+										AND fk_id_tut=$loggedin_id ORDER by id_enf";
+						$result = mysqli_query($con, $sql);
+						if (mysqli_num_rows($result) == 0) {
+							echo '<h3 class="text-white  
 											mb-5">Vous n\'avez aucune inscription active actuellement. 
 
 											</h3>
@@ -167,26 +170,52 @@ include 'session.php';
 											data-toggle="tab"
 											data-target="#p2">
 											 Ok, ajouter un séjour.</button>';
-										} else {
-											// Choix de l'enfant à inscrire au séjour 
-											echo '<h3 class="text-white  mb-5">
-											Quel enfant souhaitez-vous inscrire ? </h3>
-											<select name="choix_enf" class="col-12"  id="">';
-											while ($rows = mysqli_fetch_array($result)) {
-												echo '<option  value="' . $rows['id_enf'] . '">';
-												echo $rows['nom_enf'] . ' ' . $rows['prenom_enf'];
-												echo '</option>';
-											}
-											echo '</select>' . '
-											<div class="container mt-5">
-												<div class="row justify-content-center">
-													<a href="#new" class="btn btn-primary" data-toggle="collapse" name="suivant" type="">
-														<p class="">Suivant </p>
-													</a>
-												</div>
-											</div>';
-										}
-										?>
+						} else {
+							// Choix de l'enfant à inscrire au séjour 
+							echo '<h3 class="text-white  mb-5">
+											Voici vos inscritptions en cours </h3>
+											<table class="table table-bordered table-hover table-striped table-light">
+											<thead class="thead-dark">
+												<tr>
+												<th>Modifier</th>
+													<th> Nom
+													</th>
+													<th> Prénom
+													</th>
+													<th> Date de naissance
+													</th>
+													<th> Séjour
+													</th>
+													<th> Du
+													</th>
+													<th> Au 
+													</th>
+													<th> Adresse
+													</th>
+												</tr>
+												</thead>
+												<tbody>';
+
+							while ($rows = mysqli_fetch_array($result)) {
+
+								echo ' . 
+											<tr>
+											<th><a href="" ><img width="25"src="./img/logo/edit.png"></img></a> </th>
+											<td>' . $rows['nom_enf'] . '</td>
+											<td>' . $rows['prenom_enf'] . '</td>
+											<td>' . $rows['date_naiss_enf'] . '</td>
+											<td>' . $rows['nom_sejour'] . '</td>
+											<td>' . $rows['date_debut'] . '</td>
+											<td>' . $rows['date_fin'] . '</td>
+											<td>' . $rows['lieu_sejour'] . '</td>
+											</tr>
+											';
+							}
+							echo '</tbody>
+							</table>';
+						}
+
+						?>
 					</div>
 				</div>
 			</div>
