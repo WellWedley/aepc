@@ -12,7 +12,7 @@ include 'session.php';
 
 
 		<h1 class="text-center" style="color:white">Bienvenue <?php echo $_SESSION['prenom_tut'] ?>,</h1>
-		<div class="container-fluid">
+		<div class="container-fluid mt-5">
 			<div class="row" id="">
 
 				<!-- Barrre de Navigation secondaire  -->

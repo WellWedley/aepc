@@ -3,7 +3,7 @@
 
 <html lang="fr">
 <!-- Head commune à toutes les pages -->
-<?php include "head.php"; ?>
+<?php include "./head.php"; ?>
 
 
 

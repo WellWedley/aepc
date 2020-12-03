@@ -63,7 +63,7 @@
     </div>
 
   </div>
-  <script src="snow.js"></script>
+  <script src="./js/snow.js"></script>
   <?php include 'footer.php' ?>
 
 </body>

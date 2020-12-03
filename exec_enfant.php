@@ -1,7 +1,7 @@
 
 
 <?php
-include('./db.php');
+include('./db/db.php');
 session_start();
 $id_tut = $_SESSION['id_tut'];
 

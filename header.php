@@ -2,7 +2,7 @@
 <nav class="navbar sticky-top navbar-light bg-light mb-5 ">
     <a class="navbar-brand" href="./index.php">
         <img width="70" height="70" src="./img/logo/logo_amitie_cevenole1.png" alt="Logo de l'association Amitie Cevenole">
-      Amitié Cévenole
+        Amitié Cévenole
     </a>
 
     <ul class="nav justify-content-center">
@@ -70,10 +70,10 @@
         if ($remarks == 'failed') {
             echo '<div class="container-fluid">
                     <div class="row d-flex justify-content-center">
-                        <div class="col-md-12>
-                            <h1 class="text-white-fail ">
+                        <div class=" bg-white mb-5">
+                            <h6 class="text-dark">
                                 Identifiants erronés, veuillez réessayer.
-                            </h1>
+                            </h6>
                          </div>
                     </div>
                 </div>';
@@ -83,7 +83,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header bg-dark">
-                <h5 class="modal-title text-white " id="exampleModalLabel">Se connecter</h5>
+                <h5 class="modal-title text-white" id="exampleModalLabel">Se connecter</h5>
                 <button type="button" class="close btn-light" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="ue">&times;</span>
                 </button>
@@ -93,27 +93,27 @@
                     <?php
                     $remarks = isset($_GET['remark_login']) ? $_GET['remark_login'] : '';
                     if ($remarks == null and $remarks == "") {
-                        echo ' <h6 class="bg-dark text-white text-center-head" class="headrg"
+                        echo ' <h6 class="bg-dark text-white text-center" class="headrg"
                             >Veuillez renseigner vos identifiants</h6> ';
                     }
-                    if ($remarks == 'failed') {
-                        echo ' <div class="-fail" class="headrg ">Identifiants erronés, veuillez réessayer.</div> ';
-                    }
+
                     ?>
 
-                    <div class="row form-group">
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                    <div class="row form-group mt-3">
+                        <div class="col-lg-4 col-md-4 col-sm-4 ">
                             <p class="text-right"><label id="email-login">Email : </label></p>
                             <p class="text-right"> <label id="">Mot de passe : </label></p>
                         </div>
 
-                        <div class="col-lg-6 col-md-6 col-sm-4 col-xs-6">
+                        <div class="col-lg-6 col-md-6 col-sm-4 mb-2">
                             <p>
-                                <input class="form-control form-control-sm text-center" type="text"  name="email" required /></p>
-                            <p> <input class="form-control form-control-sm text-center"  type="password" name="mdp" required /></p>
+                                <input class="form-control form-control-sm text-center" type="text" name="email" required /></p>
+                            <p> <input class="form-control form-control-sm text-center" type="password" name="mdp" required /></p>
                         </div>
-                        <button class="btn  
-                    btn-primary btn-dark login-btn" name="submit" type="submit" value="Connexion" id="st-btn" autofocus>Connexion</button>
+                    </div>
+                    <div class="row mb-3">
+                        <button class="btn btn-primary btn-dark login-btn" name="submit" type="submit" value="Connexion" id="st-btn" autofocus>
+                            Connexion</button>
                     </div>
 
                 </form>
@@ -133,9 +133,9 @@
 
 
 <!-- Modal d'enregistrement-->
-<div class="modal  fade" id="signup" tab./index="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="ue">
+<div class="modal  fade" id="signup" tab.index="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="ue">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content">
+        <div class="modal-content text-center ">
             <div class="modal-header bg-dark">
                 <h5 class="modal-title text-white" id="exampleModalLabel">S'enregistrer</h5>
                 <button type="button " class="close btn-light" data-dismiss="modal" aria-label="Close">
@@ -143,25 +143,54 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="./execute.php" onsubmit="return validateForm()" name="reg" method="POST" >
+                <form action="./execute.php" onsubmit="return validateForm()" name="reg" method="POST">
+                    <div class="row form-group">
+                        <label for="prenom-form"class="col-5">
+                            <p class="text-right">Prénom :</p>
+                        </label>
+                        <p> <input type="text" name="prenom" id="prenom-form" required /> </p>
+                    </div>
 
                     <div class="row form-group">
-                        <div class="col-md-4">
-                            <p class="text-right"><label for="prenom-form">Prénom : </label></p>
-                            <p class="text-right"> <label id="nom">Nom : </label></p>
-                            <p class="text-right"> <label id="tb-name">Email : </label></p>
+                        <label for="nom-form" class="col-5">
+                            <p class="text-right">Nom : </p>
+                        </label>
+                        <p><input type="text" name="nom" id="nom-form" required /></p>
+                    </div>
+                    <div class="row form-group">
+                        <label for="email-form" class="col-5">
+                            <p class="text-right">Email : </p>
+                        </label>
+                        <p><input type="text" name="email" required /></p>
+                    </div>
+                    
+                    <div class="row form-group">
+                        <label for="pseudo-form" class="col-5">
+                            <p class="text-right">Pseudo : </p>
+                        </label>
+                        <p> <input type="text" name="pseudo" required /></p>
+                    </div>
+                    <div class="row form-group">
+                        <label for="pwd-form" class="col-5">
+                            <p class="text-right">Mot de passe : </p>
+                        </label>
+                        <p> <input type="password" name="mdp" required /></p>
+                    </div>
+
+
+                    <!-- <p class="text-right"> <label id="tb-name">Email : </label></p>
                             <p class="text-right"><label id="tb-name">Pseudo : </label></p>
                             <p class="text-right"> <label id="tb-name">Mot de passe : </label></p>
-                        </div>
-                        <div class="col-md-8">
+                   -->
 
-                            <p> <input type="text" name="prenom" id="prenom-form" required /> </p>
-                            <p><input type="text" name="nom" id="nom-form" required /></p>
-                            <p><input type="text"  name="email" required /></p>
-                            <p> <input type="text"  name="pseudo" required /></p>
-                            <p> <input  type="password" name="mdp" required /></p>
-                        </div>
+                    <div class="form-group">
+
+
+
+                      
+                       
                     </div>
+
                     <button class="btn btn-primary register-button" name="submit" type="submit" value="envoyer">S'enregistrer</button>
                 </form>
             </div>
